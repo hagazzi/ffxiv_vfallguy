@@ -76,5 +76,6 @@
   "FailNoVendor": "GBR は選択したアイテムを自動購入できる商人を見つけられませんでした",
   "FailReplace": "GBR の購入リストの書き込みに失敗しました（{0}）",
   "FailStartIpc": "GBR の購入開始インターフェースの呼び出しに失敗しました（未登録またはアンロード済み）",
-  "FailStart": "GBR の購入開始に失敗しました（{0}）: {1}"
+  "FailStart": "GBR の購入開始に失敗しました（{0}）: {1}",
+  "WindowTitle": "vfailguy - {0} %CURRENCY%"
 }

@@ -5,6 +5,7 @@ using Dalamud.Bindings.ImGui;
 using Dalamud.Game.ClientState.Conditions;
 using Dalamud.Interface.Utility.Raii;
 using Dalamud.Interface.Windowing;
+using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.System.Framework;
 
 namespace vfallguy;
@@ -81,6 +82,9 @@ public class MainWindow : Window, IDisposable
 
     public unsafe override void Draw()
     {
+        // 上游在标题栏显示当前金碟声誉；固定 ### ID，避免数值变化时窗口位置/状态丢失
+        WindowName = $"{Loc.Format("WindowTitle", GetMgf())}###vfailguy";
+
         if (ImGui.Button($"{Loc.Get("Queue")}###queue"))
             _automation.RegisterForDuty();
         ImGui.SameLine();
@@ -510,4 +514,14 @@ public class MainWindow : Window, IDisposable
             }
         }
     }
+
+    private DateTime? _lastCheck;
+
+    private int _mgf;
+    private unsafe int GetMgf() {
+        if (_lastCheck != null && (DateTime.Now - _lastCheck.Value).Seconds < 5) return _mgf;
+		_mgf = CurrencyManager.Instance()->ItemBucket.FirstOrDefault(i => i.Key == ReputationShop.CurrencyItemId).Value.Count;
+		_lastCheck = DateTime.Now;
+        return _mgf;
+	}
 }

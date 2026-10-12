@@ -76,5 +76,6 @@
   "FailNoVendor": "GBR hat für die gewählten Gegenstände keinen Händler gefunden, der automatischen Einkauf unterstützt",
   "FailReplace": "Schreiben der GBR-Einkaufsliste fehlgeschlagen ({0})",
   "FailStartIpc": "Aufruf der GBR-Startschnittstelle fehlgeschlagen (nicht registriert oder entladen)",
-  "FailStart": "Starten des GBR-Einkaufs fehlgeschlagen ({0}): {1}"
+  "FailStart": "Starten des GBR-Einkaufs fehlgeschlagen ({0}): {1}",
+  "WindowTitle": "vfailguy - {0} %CURRENCY%"
 }

@@ -76,5 +76,6 @@
   "FailNoVendor": "GBR 无法为所选物品找到支持自动购买的商人",
   "FailReplace": "写入 GBR 购买清单失败（{0}）",
   "FailStartIpc": "调用 GBR 启动购买接口失败（接口未注册或已卸载）",
-  "FailStart": "启动 GBR 购买失败（{0}）: {1}"
+  "FailStart": "启动 GBR 购买失败（{0}）: {1}",
+  "WindowTitle": "vfailguy - {0} %CURRENCY%"
 }

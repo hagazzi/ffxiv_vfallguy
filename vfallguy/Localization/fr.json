@@ -76,5 +76,6 @@
   "FailNoVendor": "GBR n'a trouvé aucun marchand permettant l'achat automatique des objets choisis",
   "FailReplace": "l'écriture de la liste d'achat GBR a échoué ({0})",
   "FailStartIpc": "l'appel de l'interface de démarrage GBR a échoué (non enregistrée ou déchargée)",
-  "FailStart": "le démarrage de l'achat GBR a échoué ({0}) : {1}"
+  "FailStart": "le démarrage de l'achat GBR a échoué ({0}) : {1}",
+  "WindowTitle": "vfailguy - {0} %CURRENCY%"
 }

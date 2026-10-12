@@ -76,5 +76,6 @@
   "FailNoVendor": "GBR found no vendor that supports automatic purchase for the selected items",
   "FailReplace": "writing the GBR buy list failed ({0})",
   "FailStartIpc": "calling the GBR start interface failed (not registered or unloaded)",
-  "FailStart": "starting the GBR purchase failed ({0}): {1}"
+  "FailStart": "starting the GBR purchase failed ({0}): {1}",
+  "WindowTitle": "vfailguy - {0} %CURRENCY%"
 }
