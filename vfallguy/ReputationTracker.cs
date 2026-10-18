@@ -16,7 +16,8 @@ public partial class ReputationTracker : IDisposable
     private DateTime _lastUpdate = DateTime.MinValue;
     private DateTime _nextSave = DateTime.MaxValue;
 
-    [GeneratedRegex(@"获得了\s*([\d,]+)\s*个金[碟蝶]声誉")]
+    //[GeneratedRegex(@"获得了\s*([\d,]+)\s*个金[碟蝶]声誉")]
+    [GeneratedRegex(@"You obtain\s+([\d,]+)\s+MGF", RegexOptions.IgnoreCase)]
     private static partial Regex ReputationRegex();
 
     public ReputationTracker(Configuration config)
