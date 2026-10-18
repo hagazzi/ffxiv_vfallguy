@@ -266,6 +266,8 @@ public class MainWindow : Window, IDisposable
     {
         if (!_reputation.Config.LeaveOnReputation || Service.ClientState.TerritoryType != 1165 || !Service.Condition[ConditionFlag.BoundByDuty])
             return;
+		if ((_reputation.Config.LeaveOnReputation) && (amount > 50))
+			return;
         Service.Log.Debug($"Leaving after gaining {amount} reputation");
         Service.ChatGui.Print($"[vfallguy] {Loc.Format("ChatLeaveOnReputation", amount)}");
         _automation.LeaveDuty();
